@@ -1,0 +1,20 @@
+java –version----sudo apt update---sudo apt install maven -y
+mvn archetype:generate -DgroupId=com.example.app \
+-DartifactId=demo-app \
+-DarchetypeArtifactId=maven-archetype-quickstart \
+-DinteractiveMode=false----cd demo-app-v2----nano pom.xml
+nano src/main/java/com/example/app/App.java
+nano src/test/java/com/example/app/AppTest.java
+mvn clean install
+mvn exec:java -Dexec.mainClass="com.example.app.App"
+next git init
+git config --global user.name ""
+git config --global user.email 
+git add .------git commit -m "initial commit"
+git remote add origin 
+git branch -m master---git push -u origin master
+do Jenkins----- sudo apt update
+sudo apt install openjdk-21-jdk -y
+sudo rm Jenkins.war-----sudo rm -rf ~/.jenkins
+wget https://get.jenkins.io/war-stable//latest/jenkins.war
+java -jar Jenkins.war –httpPort=8081
