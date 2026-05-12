@@ -1,0 +1,33 @@
+docker --version
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+sudo docker run hello-world
+mkdir my-python-app
+nano app.py
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def home():
+ return "Hello! Docker running successfully"
+if __name__ == "__main__":
+ app.run(host='0.0.0.0', port=5000)
+nano Dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py .
+EXPOSE 5000
+CMD ["python", "app.py"]
+nano requirements.txt
+flask
+sudo systemctl start docker
+sudo systemctl status docker
+docker build -t image-pqr .
+docker images
+docker run -d -p 5000:5000 --name container image-pqr
+localhost:5000
