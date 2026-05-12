@@ -1,0 +1,133 @@
+docker --version
+
+
+* mkdir my-python-app
+
+
+* cd my-python-app
+
+
+* nano app.py
+
+
+nano Dockerfile
+
+
+* nano requirements.txt
+
+
+* git init
+
+
+* git config --global user.name "Liki"
+
+
+* git config --global user.email ""
+
+
+* git add .
+
+
+* git commit -m "initial commit"
+
+
+* git remote add origin github link repo
+
+
+* git branch -M master
+
+
+* git push -u origin master
+
+
+username -
+
+
+password
+
+
+-> create a linking file in your created repository
+
+
+docker image = docker username
+
+
+image = my-python-app
+
+
+* sudo docker build -t my-python-app .
+
+
+* docker tag my-python-app:latest Padmanabha18/my-python-app:latest
+
+
+* docker images
+
+
+* sudo docker run -d -p 5000:5000 --name container Padmanabha18/my-python-app:latest
+
+
+-> it will give one hash value
+
+
+* docker login -u Padmanabha18
+
+
+-> do login to docker
+
+
+-> in terminal also it asks password type it
+
+
+* sudo docker push Padmanabha18/my-python-app:latest
+
+
+-> Take new terminal
+
+
+* sudo apt update
+
+
+* sudo apt install openjdk-17-jre
+
+
+* wget https://get.jenkins.io/war-stable/latest/jenkins.war
+
+
+* java -jar jenkins.war --httpPort=8086
+
+
+-> u will get hash value
+
+
+-> in chrome -> localhost:8086
+
+
+* Put hash value
+
+
+go to credentials
+
+
+add credentials
+
+
+dockerhub username & password
+
+
+↓
+
+
+New item
+
+
+↓
+
+
+pipeline
+
+
+github repo url
+
+
+change credentials
